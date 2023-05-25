@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 
 const Forms = () => {
-    const[name,setName]=useState("");
+  const[name,setName]=useState('');
+  const handleSubmit =()=>{
+    console.log(name);
+  }
   return (
-    <div className='App'>
-        <form>
-            <label>Enter your Name:</label>
-            <input type='text' value={name} onChange={(e)=>setName(e.target.value)}></input>
-        </form>
+    <div>
+      <label>Name:</label>
+      <input onChange={(e)=>setName(e.target.value)} type='text'/><br></br>
+      <button className='btn btn-primary' onClick={handleSubmit()}>Submit</button>
     </div>
   )
 }

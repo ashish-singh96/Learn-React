@@ -9,7 +9,7 @@ import Table from './component/Table';
 function App() {
   return (
     <div className='App'>
-      <Card/>
+      <Forms/>
     </div>
   );
 }
