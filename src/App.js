@@ -7,10 +7,11 @@ import Form1 from './component/Form1';
 import Forms from './component/Forms';
 import Parent from './component/Parent';
 import Table from './component/Table';
+import Us from './Hooks/Us';
 function App() {
   return (
     <div className='App'>
-      <Form1/>
+     <Us/>
     </div>
   );
 }

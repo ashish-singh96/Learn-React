@@ -1,17 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const UseState = () => {
-    const[data,setData]=useState("Ashish");
-    const handlechane = () =>{
-      setData("Shivam");
-    }
-    const[location,setLocation]=useState("Delhi")
+  const[val,setValue]=useState(0);
+  const[calculate,SetCalculate]=useState(0);
+    
+  const handleChange = () =>{
+    setValue(val+1);
+  }
+
+  useEffect(()=>{
+    SetCalculate(()=>2*val);
+  },[val])
+  
   return (
     <div>
-         <h3 className='text-secondary'>Name:{data}</h3>
-         <h6>Update state</h6>
-         <button onClick={(e)=>handlechane(e)}>Click me to change the name</button>
-         <h3 className='text-secondary'>location:{location}</h3>
+      <h1>Count: {val}</h1>
+      <button onClick={handleChange} className='btn btn-primary'>Click me</button>
+      <p>Calculate:{calculate}</p>
     </div>
   )
 }
