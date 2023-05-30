@@ -11,7 +11,7 @@ import Us from './Hooks/Us';
 import Todo from './TODO/Todo';
 function App() {
   return (
-    <div className='App'>
+    <div>
     <Todo/>
     </div>
   );
