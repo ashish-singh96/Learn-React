@@ -8,10 +8,11 @@ import Forms from './component/Forms';
 import Parent from './component/Parent';
 import Table from './component/Table';
 import Us from './Hooks/Us';
+import Todo from './TODO/Todo';
 function App() {
   return (
     <div className='App'>
-     <Us/>
+    <Todo/>
     </div>
   );
 }
