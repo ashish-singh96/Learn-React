@@ -10,7 +10,12 @@ const Todo = () => {
             setItems([...items, inputData]);
             setInputData("");
         }
-
+    }
+    const deleteItem = (id) =>{
+        const updateItems=items.filter((ele,ind)=>{
+            return ind !== id;
+        })
+        setItems(updateItems);
     }
     return (
         <div>
@@ -29,9 +34,9 @@ const Todo = () => {
                         {
                             items.map((ele, ind) => {
                                 return (
-                                    <div className='eachItem'>
+                                    <div className='eachItem' key={ind}>
                                         <h3>{ele}</h3>
-                                        <i className="fas fa-trash-alt add-btn" title='Delete Items'></i>
+                                        <i className="fas fa-trash-alt add-btn"  onClick={()=>deleteItem(ind)} title='Delete Items'></i>
                                     </div>
                                 )
                             })
