@@ -10,13 +10,12 @@ import Table from './component/Table';
 import Us from './Hooks/Us';
 import Todo from './TODO/Todo';
 import {Header,Footer} from './Web3Mantra/Header';
+import Props from './Web3Mantra/Props';
 function App() {
-  let name="Ashish"
+  // let name="Ashish"
   return (
     <div className='App'>
-    <Header/>
-    <h1 style={{background:"blue"}}>{name}</h1>
-    <Footer/>
+    <Props firstName="Ashish" lastName="Bhadauriya"/>
     </div>
   );
 }
