@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './Style.css';
+
+
+
 const Todo = () => {
     const [inputData, setInputData] = useState("");
     const [items, setItems] = useState([]);
@@ -21,6 +24,7 @@ const Todo = () => {
     const removeAll = () =>{
         setItems([]);
     }
+
     return (
         <div>
             {/* <h1>TODO CURD Application !</h1> */}
@@ -48,7 +52,7 @@ const Todo = () => {
 
                     </div>
                     <div className='showItems'>
-                        <button className='btn effect04' data-sm-link-text='Remove All' onClick={removeAll}> <span>Check List</span></button>
+                        <button className='btn effect04' style={{background:"white"}}  onClick={removeAll}> <span> Remove All</span></button>
 
                     </div>
                 </div>

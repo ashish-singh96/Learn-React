@@ -9,10 +9,14 @@ import Parent from './component/Parent';
 import Table from './component/Table';
 import Us from './Hooks/Us';
 import Todo from './TODO/Todo';
+import {Header,Footer} from './Web3Mantra/Header';
 function App() {
+  let name="Ashish"
   return (
-    <div>
-    <Todo/>
+    <div className='App'>
+    <Header/>
+    <h1>{name}</h1>
+    <Footer/>
     </div>
   );
 }
