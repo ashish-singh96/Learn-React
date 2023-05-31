@@ -15,7 +15,7 @@ function App() {
   return (
     <div className='App'>
     <Header/>
-    <h1>{name}</h1>
+    <h1 style={{background:"blue"}}>{name}</h1>
     <Footer/>
     </div>
   );

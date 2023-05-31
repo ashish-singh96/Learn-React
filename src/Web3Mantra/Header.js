@@ -1,8 +1,9 @@
 import React from "react";
+import './Header.css';
 function Header (){
     return (
         <div>
-            <h1>Header</h1>
+            <h1 className="header">Header</h1>
         </div>
     )
 }
@@ -11,7 +12,7 @@ function Header (){
 function Footer () {
     return (
         <div>
-            <h1>Footer</h1>
+            <h1 className="footer">Footer</h1>
         </div>
     )
 }
