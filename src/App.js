@@ -9,13 +9,27 @@ import Parent from './component/Parent';
 import Table from './component/Table';
 import Us from './Hooks/Us';
 import Todo from './TODO/Todo';
-import {Header,Footer} from './Web3Mantra/Header';
+import { Header, Footer } from './Web3Mantra/Header';
 import Props from './Web3Mantra/Props';
+import MovieReview from './Web3Mantra/MovieReview';
+import Movies from './Web3Mantra/Movies';
+import Movie from './Movie.json';
 function App() {
-  // let name="Ashish"
   return (
     <div className='App'>
-    <Props firstName="Ashish" lastName="Bhadauriya"/>
+      <MovieReview />
+      <div className='main'>{
+        Movie.map((element) => {
+          return(
+          <Movies 
+          title={element.Title}
+          Year={element.Year}
+          img={element.Poster}
+           />
+         ) })
+      }
+
+      </div>
     </div>
   );
 }
