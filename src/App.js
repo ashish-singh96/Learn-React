@@ -14,22 +14,12 @@ import Props from './Web3Mantra/Props';
 import MovieReview from './Web3Mantra/MovieReview';
 import Movies from './Web3Mantra/Movies';
 import Movie from './Movie.json';
+import PuffLoader from './Spinners/PuffLoader';
 function App() {
   return (
     <div className='App'>
-      <MovieReview />
-      <div className='main'>{
-        Movie.map((element) => {
-          return(
-          <Movies 
-          title={element.Title}
-          Year={element.Year}
-          img={element.Poster}
-           />
-         ) })
-      }
-
-      </div>
+      <PuffLoader/>
+      <UseEffect/>
     </div>
   );
 }
